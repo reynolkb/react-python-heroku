@@ -7,7 +7,8 @@ from flask_cors import CORS, cross_origin
 # do not need static_url_path
 app = Flask(__name__, static_folder='my-app/build', static_url_path='')
 CORS(app)
-# on the front end api is not there
+# on the front end api is not there for dev
+# on heroku this is there
 @app.route('/api', methods=['GET'])
 @cross_origin()
 def index():
